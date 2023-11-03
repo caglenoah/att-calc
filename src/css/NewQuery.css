@@ -1,0 +1,21 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: fit-content;
+  align-items: center;
+}
+
+.map_container {
+  background-color: darkgray;
+  width: 200px;
+  height: 200px;
+  border-radius: 6px;
+  border-color: black;
+}
+
+.sub_newQuery {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
