@@ -27,7 +27,7 @@ const Login = () => {
     // set cookie here
     // set loggedIn = true and max-age = 60*1000 (one minute)
     axios
-      .post("http://localhost:5001/login", {
+      .post("https://att-calc-backend.onrender.com/login", {
         username: state.username,
         password: state.password,
       })
@@ -35,11 +35,11 @@ const Login = () => {
         document.cookie = cookie.serialize("loggedIn", "true");
         console.log(res.data);
         document.cookie = cookie.serialize("token", res.data);
+        navigate("/newquery");
       })
       .catch((err) => {
         console.log(err);
       });
-    // navigate("/");
   };
 
   return (

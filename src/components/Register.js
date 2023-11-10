@@ -8,7 +8,7 @@ const Register = () => {
 
   const [state, setState] = useState({
     username: "",
-    password: ""
+    password: "",
   });
 
   const handleTextChange = (e) => {
@@ -23,23 +23,25 @@ const Register = () => {
 
   const register = (e) => {
     e.preventDefault();
-    axios.post("http://localhost:5001/register", {
-        "username": state.username,
-        "password": state.password
-    
-    })
+    axios
+      .post("https://att-calc-backend.onrender.com/register", {
+        username: state.username,
+        password: state.password,
+      })
       .then((res) => {
-      console.log(res)
-    }) .catch(err => {console.log(err)})
-
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
 
     // set cookie here
     // set loggedIn = true and max-age = 60*1000 (one minute)
 
     navigate("/login");
   };
-  console.log(state.username)
-  console.log(state.password)
+  console.log(state.username);
+  console.log(state.password);
   return (
     <div className="App">
       <Container maxWidth="sm">

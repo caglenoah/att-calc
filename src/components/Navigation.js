@@ -11,7 +11,7 @@ const Navigation = () => {
       maxAge: 0,
     });
     document.cookie = cookie.serialize("token", "");
-    // navigate("/login");
+    navigate("/");
   };
   return (
     <AppBar position="relative">

@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "@mui/material";
-
+import { Link } from "react-router-dom";
 function Landing() {
   return (
     <div>
@@ -9,14 +9,11 @@ function Landing() {
         where the relation of ease to creation creats elation at any station
       </h1>
       <p>continue to login</p>
-      <Button
-        type="submit"
-        className="login-button"
-        variant="contained"
-        color="primary"
-      >
-        to login
-      </Button>
+      <Link to="/login">
+        <Button className="login-button" variant="contained" color="primary">
+          to login
+        </Button>
+      </Link>
     </div>
   );
 }
